@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>CSS Mosh Pit</title>
     <link rel="stylesheet" href="./stage.css" />
+    <script src="./util.js"></script>
     <script src="./stage.js"></script>
 
   </head>
@@ -14,6 +15,20 @@
       <h1>CSS Mosh Pit</h1>
     </div>
 
-    <iframe style="display: block !important; width: 100% !important; min-height: 500px !important;" src="./pit.html"></iframe>
+    <iframe src="./pit.html"></iframe>
+    <style>
+      /* Make it harder to ruin the mosh pit for everybody */
+      html body {
+        display: block !important;
+        width: 100% !important;
+        min-height: 100% !important;
+      }
+      html body iframe {
+        display: block !important;
+        width: 100% !important;
+        min-height: 500px !important;
+        border: 0; /* not important, but i still like it */
+      }
+    </style>
   </body>
 </html>
