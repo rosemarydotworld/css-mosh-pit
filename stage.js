@@ -1,3 +1,5 @@
+'use strict';
+
 function init() {
   var mosh     = document.getElementById('mosh');
 
@@ -6,9 +8,25 @@ function init() {
 
   ref.on('value', function(dataSnapshot) {
     headless.getText(function(text) {
-      mosh.innerText = text;
+      var styles = prepareStyles(text);
+
+      applyStyles(mosh, styles);
     });
   });
+}
+
+function prepareStyles(styles) {
+  var contentRegex = new RegExp('content:(.*?);');
+
+  if(styles.match(contentRegex)) {
+    styles = styles.replace(contentRegex, "content: '💩';");
+  }
+
+  return styles;
+}
+
+function applyStyles(target, styles) {
+  target.innerText = styles;
 }
 
 window.onload = init;
