@@ -15,9 +15,6 @@ function init() {
 
   //// Create Firepad.
   var firepad = Firepad.fromACE(firepadRef, editor, {});
-
-  firepad.on('ready', function() { parent.postMessage(firepad.getText(), window.location.origin); });
-  firepad.on('synced', function() { parent.postMessage(firepad.getText(), window.location.origin); });
 }
 
 window.onload = init;
