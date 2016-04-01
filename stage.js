@@ -1,5 +1,3 @@
-'use strict';
-
 function init() {
   var mosh     = document.getElementById('mosh');
 
@@ -16,17 +14,23 @@ function init() {
 }
 
 function prepareStyles(styles) {
-  var contentRegex = new RegExp('content:(.*?);');
-
-  if(styles.match(contentRegex)) {
-    styles = styles.replace(contentRegex, "content: '💩';");
-  }
-
-  return styles;
+  return cleanPseudoContent(cleanUrl(styles));
 }
 
 function applyStyles(target, styles) {
   target.innerText = styles;
+}
+
+function cleanPseudoContent(styles) {
+  var contentRegex = new RegExp('content:(.*?);', 'm');
+
+  return styles.replace(contentRegex, "content: '💩';");
+}
+
+function cleanUrl(styles) {
+  var urlRegex = new RegExp('url\((.*?)\)', 'm');
+
+  return styles.replace(urlRegex, "url()");
 }
 
 window.onload = init;
