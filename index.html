@@ -10,24 +10,59 @@
   </head>
 
   <body>
+    <a id="the-call" href="/pit.html">Edit this page&rsquo;s CSS</a>
     <div id="the-stage">
       <style scoped id="mosh"></style>
-      <h1>CSS Mosh Pit</h1>
+      <h1 class="site-title">CSS Mosh Pit</h1>
+      <div class="intro">
+        <p>A celebration of chaos, brought to you by CSS.</p>
+        <p>Go to <a href="./pit.html"><code>/pit.html</code></a> to style this page collaboratively&mdash;or competitively&mdash; in realtime. Have fun, and don&rsquo;t get too attached to the code you write.</p>
+        <p>All we are is dust in the wind, dude.</p>
+      </div>
+      <div class="formlessness">
+        <h2>The Formless Way</h2>
+        <blockquote>
+          We inspect it, and do not see it; it is invisible.<br>
+          We edit it, and it does not change; it is immutable.<br>
+          Oh shit. Is our Sass not compiling? Damn it to hell.
+        </blockquote>
+      </div>
+      <div class="impartiality">
+        <h2>Impartiality &amp; Straw Dogs</h2>
+        <blockquote>
+          HTML and CSS are impartial<br>
+          They regard myriad things as straw dogs<br>
+          The working group is impartial<br>
+          They regard people as straw dogs
+        </blockquote>
+      </div>
+      <div class="emptiness">
+        <h2>The Source of All Things</h2>
+        <blockquote>
+          The DOM is empty<br>
+          When utilized, it is not filled up<br>
+          So deep! It seems to be the source of all things
+        </blockquote>
+      </div>
+      <div class="credits">
+        <p>Brought to you by <a href="http://liamcampbell.info">Liam Campbell</a>. This site is an answer to the <a href="http://www.csszengarden.com/">CSS Zen Garden</a>.</p>
+      </div>
     </div>
 
-    <iframe src="./pit.html"></iframe>
     <style>
       /* Make it harder to ruin the mosh pit for everybody */
-      html body {
+      html body,
+      html body #the-stage {
         display: block !important;
         width: 100% !important;
         min-height: 100% !important;
       }
-      html body iframe {
+      html body a#the-call {
         display: block !important;
         width: 100% !important;
-        min-height: 500px !important;
-        border: 0; /* not important, but i still like it */
+        min-height: 20px !important;
+
+        text-align: center;
       }
     </style>
   </body>

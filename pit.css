@@ -1,9 +1,11 @@
 body {
   margin: 0;
+  height: 100%;
 }
 
 #the-pit {
   display: block;
   width: 100%;
   min-height: 500px;
+  height: 100%;
 }
