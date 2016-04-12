@@ -11,7 +11,8 @@
 
   <body>
     <a id="the-call" href="./pit.html">Edit this page&rsquo;s CSS</a>
-    <div id="the-stage">
+    <div id="the-loader">Loading the CSS, hold on a sec...</div>
+    <div id="the-stage" hidden="true">
       <style scoped id="mosh"></style>
       <h1 class="site-title">CSS Mosh Pit</h1>
       <div class="intro">
@@ -56,6 +57,9 @@
         display: block !important;
         width: 100% !important;
         min-height: 100% !important;
+      }
+      html body #the-stage[hidden="true"] {
+        display: none !important;
       }
       html body a#the-call {
         box-sizing: border-box !important;
