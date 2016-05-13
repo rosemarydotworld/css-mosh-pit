@@ -19,7 +19,7 @@ function init() {
   firepad.on('synced', function(isSynced) {
     if(!isSynced) {
       var styles = firepad.getText();
-      var preparedStyles = cleanPseudoContent(cleanUrl(styles));
+      var preparedStyles = cleanWildcards(cleanPseudoContent(cleanUrl(styles)));
 
       if(preparedStyles != styles) {
         firepad.setText(preparedStyles);
@@ -38,6 +38,12 @@ function cleanUrl(styles) {
   var urlRegex = new RegExp('url\s*\((.+)\)', 'im');
 
   return styles.replace(urlRegex, "/* heck nope */");
+}
+
+function cleanWildcards(styles) {
+  var wildcardRegex = new RegExp('.*\\*.*{', 'im');
+
+  return styles.replace(wildcardRegex, "/* nah */")
 }
 
 window.onload = init;

@@ -6,9 +6,85 @@
     <link rel="stylesheet" href="./stage.css" />
     <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firepad/1.3.0/firepad.min.js"></script>
+    <script src="./stage.js"></script>
   </head>
 
   <body>
-    The mosh pit is closed for some security renovations <3. Watch <a href="http://twitter.com/liamdanger">My twitter feed</a> for updates.
+    <a id="the-call" href="./pit.html">Edit this page&rsquo;s CSS</a>
+    <div id="the-loader">Loading the CSS, hold on a sec...</div>
+    <div id="the-stage" hidden="true">
+      <style scoped id="mosh"></style>
+      <h1 class="site-title">CSS Mosh Pit</h1>
+      <div class="intro">
+        <p>A celebration of chaos, brought to you by CSS.</p>
+        <p>Go to <a href="./pit.html"><code>/pit.html</code></a> to style this page collaboratively&mdash;or competitively&mdash; in realtime. Have fun, and don&rsquo;t get too attached to the code you write.</p>
+        <p>All we are is dust in the wind, dude.</p>
+      </div>
+      <div class="formlessness">
+        <h2>The Formless Way</h2>
+        <blockquote>
+          We inspect it, and do not see it; it is invisible.<br>
+          We edit it, and it does not change; it is immutable.<br>
+          Oh, shit. Is Grunt not running? Damn it to hell.
+        </blockquote>
+      </div>
+      <div class="impartiality">
+        <h2>Impartiality &amp; Straw Dogs</h2>
+        <blockquote>
+          HTML and CSS are impartial<br>
+          They regard myriad things as straw dogs<br>
+          The working group is impartial<br>
+          They regard people as straw dogs
+        </blockquote>
+      </div>
+      <div class="emptiness">
+        <h2>The Source of All Things</h2>
+        <blockquote>
+          The DOM is empty<br>
+          When utilized, it is not filled up<br>
+          So deep! It seems to be the source code of all things
+        </blockquote>
+      </div>
+      <div class="credits">
+        <p>Brought to you by <a href="http://liamcampbell.info">Liam Campbell</a>. This site is an answer to the <a href="http://www.csszengarden.com/">CSS Zen Garden</a>.</p>
+      </div>
+    </div>
+
+    <style>    
+      /* Make it harder to ruin the mosh pit for everybody */
+      html body,
+      html body #the-stage {
+        display: block !important;
+        width: 100% !important;
+        min-height: 100% !important;
+      }
+      html body #the-stage[hidden="true"] {
+        display: none !important;
+      }
+      html body a#the-call {
+        box-sizing: border-box !important;
+        display: block !important;
+        width: 280px !important;
+        height: 40px !important;
+        padding: 12px !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        font-family: Helvetica, Arial, sans-serif !important;
+        font-size: 16px !important;
+        letter-spacing: 1.5px !important;
+        line-height: 1 !important;
+        text-decoration: none !important;
+        text-transform: uppercase !important;
+
+        color: #000 !important;
+        background-color: #fff !important;
+        border-radius: 0 0 3px 3px !important;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15) !important;
+
+        text-align: center !important;
+      }
+    </style>
   </body>
 </html>
