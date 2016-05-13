@@ -29,15 +29,15 @@ function init() {
 }
 
 function cleanPseudoContent(styles) {
-  var contentRegex = new RegExp('content:.+?;', 'm');
+  var contentRegex = new RegExp('content:.+', 'im');
 
-  return styles.replace(contentRegex, "content: '💩';");
+  return styles.replace(contentRegex, "/* nope */");
 }
 
 function cleanUrl(styles) {
-  var urlRegex = new RegExp('url\((.+?)\);', 'm');
+  var urlRegex = new RegExp('url\s*\((.+)\)', 'im');
 
-  return styles.replace(urlRegex, "url()");
+  return styles.replace(urlRegex, "/* heck nope */");
 }
 
 window.onload = init;
